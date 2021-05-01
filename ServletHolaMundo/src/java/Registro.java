@@ -11,6 +11,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+//esta se encarga del objeto para la conexión con la bd
+import java.sql.Connection;
+import java.sql.DriverManager;
+//esta se encarga de poder realizar las sentencias sql como son:
+//insert, delete, update, create, alter, drop
+
+import java.sql.Statement;
+//esta se encarga de generar un objeto para poder realizar las consultas
+import java.sql.ResultSet;
+import javax.servlet.ServletConfig;
+
 /**
  *
  * @author molin
@@ -26,6 +37,57 @@ public class Registro extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    //variables globales
+    private Connection con;
+    private Statement set;
+    private ResultSet rs;
+    
+    //constructor: para poder inicializar
+    public void init(ServletConfig cfg) throws ServletException{
+                //como se va a conectar a la bd
+                
+                String url = "jdbc:mysql:3306//localhost/registro4IV9";
+                            //tipodriver:gestorbd:puerto//IP/nombrebd
+                            
+                            
+                String userName = "root";
+                String password = "Montero.69";
+                
+                
+                try{           
+                    Class.forName("com.mysql.jdbc.Driver");
+                    /*A veces el tipo de driver ya tiene incluido el puerto de comunicación,
+                    es por ello que nos arroja un error de conexión, para resolver este error 
+                    simplemente hacemos lo siguiente
+                    
+                    url = "jdbc:mysql://localhost/registro4IV9";
+                    */
+                    url = "jdbc:mysql://localhost/registro4IV9";    
+                    con = DriverManager.getConnection(url, userName, password);
+                    set = con.createStatement();
+                    
+                    System.out.print("Conexión exitosa");
+                    
+                }catch(Exception e){
+                    
+                    System.out.println("Conexión no exitosa");
+                    System.out.println(e.getMessage());
+                    //StackTrace no sidce donde está el error
+                    System.out.println(e.getStackTrace());
+                    
+                }
+    }
+    
+    //la tabla que creamos se llama mregistro
+    /*
+    PARA CREAR UNA TABLE EN MySQL
+    
+    1. create database Nombre de la tabla;
+    Para usarla escribimos lo siguiente
+    2.
+    */
+
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -50,6 +112,32 @@ public class Registro extends HttpServlet {
             
             ipr = request.getRemoteAddr();
             puertor = request.getRemotePort();
+            
+            //vamos a registrar en la bd
+            try{
+                
+                                    /*
+                    Para poder registrar usuario es necesario la sentencia insert
+                    bajo el siguiente esquema:
+                    
+                    insert into nombretabla (atributo1, atributo2, ...) values("valor1"), ("valor2"), ("valor3")
+                    
+                    ""son para valores de tipo cadena
+                    ''numerico
+                    nada numerico
+                    */
+                    
+                    
+                
+            String q = "insert into mregistro "
+                    + "(nom_usu, appat_usu, apmat_usu, edad_usu, email_usu)"
+                    + "values"
+                    + "('"+nom+"', '"+appat+"', '"+apmat+"', "+edad+", '"+correo+"')";
+            
+            
+            set.executeUpdate(q);
+                System.out.println("Registro exitoso en la tabla");
+            
             
 
             out.println("<!DOCTYPE html>");
@@ -82,6 +170,27 @@ public class Registro extends HttpServlet {
                     + "<a href='index.html'>Regresar al menú principal</a>");
             out.println("</body>");
             out.println("</html>");
+            
+            }catch(Exception e){
+                System.out.println("Error al registrar en la tabla");
+                System.out.println(e.getMessage());
+                System.out.println(e.getStackTrace());
+                
+                            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet Registro</title>");            
+            out.println("</head>");
+            out.println("<body>"
+            + "<br>");
+
+            out.println("<h1>Registro no exitoso, ocurrio un error</h1>"
+                    + "<a href='index.html'>Regresar al Menú principal</a>");
+            out.println("</body>");
+            out.println("</html>");
+                
+                
+            }
         }
     }
 
