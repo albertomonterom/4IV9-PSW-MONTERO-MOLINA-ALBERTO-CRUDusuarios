@@ -9,41 +9,80 @@ and open the template in the editor.
         <title>Registro de Usuarios</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="masterstyle.css">
+        <script src= "validar.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+        </style>
+
+        
     </head>
     <body>
+        <h1>Registro de Usuarios</h1>
         <div class="container">
             <div class="contenedorRegistro">
-                <form method="post" name="formulario" 
-                      action="Registro">
-                    <label>Nombre: </label>
+                <form class="formulario" method="post" name="formulario" 
+                      action="Registro" onsubmit="return validar(this)">
+                    
+                    <label for="nombre">Nombre: </label>
                     <br>
-                    <input type="text" name="nombre">
+                    <input class="input-form-text" type="text" name="nombre" id="nombre" placeholder="Tu nombre" onkeypress="return validarC(event)" onkeydown="if(this.value.length == 20) return false;"/>
                     <br>
                     
-                    <label>Apellido Paterno: </label>
+                    <label for ="apellido_pat">Apellido Paterno: </label>
                     <br>
-                    <input type="text" name="appat">
-                    <br>
-                    
-                    <label>Apellido Materno: </label>
-                    <br>
-                    <input type="text" name="apmat">
+                    <input class="input-form-text" type="text" name="appat" id="apellido_pat" placeholder="Tu apellido paterno" onkeypress="return validarC(event)" onkeydown="if(this.value.length == 20) return false;"/>
                     <br>
                     
-                    <label>Edad: </label>
+                    <label for="apellido_mat">Apellido Materno: </label>
                     <br>
-                    <input type="number" name="edad">
-                    <br>
-                    
-                    <label>Email: </label>
-                    <br>
-                    <input type="email" name="correo">
+                    <input class="input-form-text" type="text" name="apmat" id="apellido_mat" placeholder="Tu apellido materno" onkeypress="return validarC(event)" onkeydown="if(this.value.length == 20) return false;"/>
                     <br>
                     
-                    <input type="submit" value="Registrar Usuario">
-                    <input type="reset" value="Borrar Datos">
+                    <label for="edad">Edad: </label>
+                    <br>
+                    <input class="input-form-text" type="number" name="edad" id="edad" placeholder="Tu edad">
+                    <br>
+                    
+                    <label for="email">Email: </label>
+                    <br>
+                    <input class="input-form-text" type="email" name="correo" id="email" placeholder="Tu mail" onkeypress="return validarD(event)" onkeydown="if(this.value.length == 50) return false;"/>
+                    <br>
+                    
+                    <input class="input_form" type="submit" value="Registrar Usuario">
+                    <input class="input_form" type="reset" value="Borrar Datos">
                 </form> 
+                
+                <br>
+            <div class="contenedorConsultar">
+
+                <br>
+                <form name="formularioConsultar" method="get" action="Consultar">
+
+                    <input class="input_form" type="submit" value="Consultar Tabla General de Usuarios">
+
+                </form>
+
             </div>
+
+            <div class="contenedorEliminar">
+                <br>
+                <form name="formularioEliminar" method="post" action="Eliminar">
+                    <label>Por favor ingresa el ID de la fila a eliminar (consulta la tabla general de usuarios)</label>
+                    <input type="text" onkeypress="return validarNumeros(event)" name="ideliminar">
+                    <input class="input_form" type="submit" value="Eliminar Registro">
+                </form>
+
+            </div>
+            <div class="contenedorActualizar" >
+                <form name="formularioEliminar" method="post" action="Actualizar">
+
+                    <label>Por favor ingresa el ID de la fila a modificar (consulta la tabla general de usuarios)</label>
+                    <input type="text" onkeypress="return validarNumeros(event)" name="idmodificar" >
+                    <input class="input_form" type="submit" value="Modificar Registro">
+                </form>
+            </div>
+        </div>
         </div>
     </body>
 </html>

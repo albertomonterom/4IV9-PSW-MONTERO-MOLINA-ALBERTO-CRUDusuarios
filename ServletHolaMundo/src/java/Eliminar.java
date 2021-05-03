@@ -10,7 +10,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 //esta se encarga del objeto para la conexión con la bd
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -26,17 +25,18 @@ import javax.servlet.ServletConfig;
  *
  * @author molin
  */
-public class Registro extends HttpServlet {
+public class Eliminar extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *
-     * @param request servlet request se encargará de atender las peticiones del cliente
-     * @param response servlet response se encargará de atender las respuestas por parte del servidor
+     * @param request servlet request
+     * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
     //variables globales
     private Connection con;
     private Statement set;
@@ -78,155 +78,51 @@ public class Registro extends HttpServlet {
                 }
     }
     
-    //la tabla que creamos se llama mregistro
-    /*
-    PARA CREAR UNA TABLE EN MySQL
-    
-    1. create database Nombre de la bd;
-    ->Para usarla escribimos lo siguiente
-    2. use Nombre de la bd;
-    ->Para crear una tabla
-    3. create table Nombre de la tabla;
-    ->Para mostrar las tablas en la base de datos una vez allí 
-    4. show tables;
-    ->Para seleccionar la tabla en esa base de datos:
-    3. select * from Nombre de la tabla;
-    el asterisco significa que se selecciona todas las columnas 
-    si quiero seleccionar una colunma en específico
-    
-    Entonces:
-    select * nombredelacolumna from nombre de la tabla 
-    Entonces 
-    select * nombredelacolumna, nombredela2columna from nombre de la tabla 
-    Podemos ordenar la tabla ordenandolas mediante un atributo 
-    
-    ejemplo:
-    select * nombredelacolumna, nombredela2columna from nombre de la tabla order by nombre de algun atributo
-    
-    
-    select * from mregistro
-    ->selecciona todo de la tabla "mregistro"
-    
-    
-    Extra:
-    Para ver los atributos 
-    
-    ->describe Nombre de la tabla;
-    */
-    
-    
-    /*
-    CRUD
-    C->Crear->Crear
-    R->Read->Leer
-    U->Update->Actualizar
-    D->Delete->Eliminar
-    */
-
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            
-            String nom, appat, apmat, correo, ip, ipr;
-            int edad, puerto, puertor;
-            
-
-            
-            nom = request.getParameter("nombre");
-            appat = request.getParameter("appat");
-            apmat = request.getParameter("apmat");
-            edad = Integer.parseInt(request.getParameter("edad"));
-            correo = request.getParameter("correo");
-            
-            
-            /*local address*/
-            ip = request.getLocalAddr();
-            puerto = request.getLocalPort();
-            
-            ipr = request.getRemoteAddr();
-            puertor = request.getRemotePort();
-            
-            //vamos a registrar en la bd
-            try{
-                
-                                    /*
-                    Para poder registrar usuario es necesario la sentencia insert
-                    bajo el siguiente esquema:
-                    
-                    insert into nombretabla (atributo1, atributo2, ...) values("valor1"), ("valor2"), ("valor3")
-                    
-                    ""son para valores de tipo cadena
-                    ''numerico
-                    nada numerico
-                    */
-                    
-                    
-                
-            String q = "insert into mregistro "
-                    + "(nom_usu, appat_usu, apmat_usu, edad_usu, email_usu)"
-                    + "values"
-                    + "('"+nom+"', '"+appat+"', '"+apmat+"', "+edad+", '"+correo+"')";
-            
-            
-            set.executeUpdate(q);
-                System.out.println("Registro exitoso en la tabla");
-            
-            
-
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Registro</title>");            
+            out.println("<title>Servlet Eliminar</title>");            
             out.println("</head>");
-            out.println("<body>"
-                    + "<br>"
-                    + "Tu nombre es:"+nom
-                    + "<br>"
-                    + "Tu apellido paterno es:"+appat
-                    + "<br>"
-                    + "Tu apellido materno es: "+apmat
-                    + "<br>"
-                    + "Tu edad es: "+edad
-                    + "<br>"
-                    + "Tu email es: "+correo
-                    + "<br>"
-                    + "IP Local: "+ip
-                    + "<br>"
-                    + "Puerto Local: "+puerto
-                    + "<br>"
-                    + "IP Remota: "+ipr
-                    + "<br>"
-                    + "Puerto Remoto: "+puertor
-                    + "<br>");
-
-            out.println("<h1>Registro Exitoso</h1>"
-                    + "<a href='index.html'>Regresar al menú principal</a>");
+            out.println("<body>");
+            out.println("<h1>Servlet Eliminar at " + request.getContextPath() + "</h1>");
             out.println("</body>");
-            out.println("</html>");
             
+            
+            
+            
+                        int id;
+            
+            id = Integer.parseInt(request.getParameter("ideliminar"));
+            
+            String q= "delete from mregistro where id_usu = "+id;
+            
+            try{
+                
+                set.execute(q);
+                out.println("<h1>USUARIO ELIMINADO</h1>"
+                    + "<br>"
+                    + "<a href = 'index.html'>Regresar al menu principal</a>"
+                    + "<br>"
+                    + "<a href = 'Registro'>Ir al registro</a>");
+                
             }catch(Exception e){
-                System.out.println("Error al registrar en la tabla");
+                
+                out.println("<h1>USUARIO NO ELIMINADO, OCURRIO UN ERROR</h1>");
                 System.out.println(e.getMessage());
                 System.out.println(e.getStackTrace());
                 
-                            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Registro</title>");            
-            out.println("</head>");
-            out.println("<body>"
-            + "<br>");
-
-            out.println("<h1>Registro no exitoso, ocurrio un error</h1>"
-                    + "<a href='index.html'>Regresar al Menú principal</a>");
-            out.println("</body>");
-            out.println("</html>");
-                
-                
             }
+            
+            out.println("</body>");
+
+            
+            out.println("</html>");
         }
     }
 

@@ -1,0 +1,67 @@
+body{
+    padding-top: 2rem;
+    background: #ced4da;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+}
+.contenedorRegistro{
+    font-size: 30px;
+}
+
+.input_form_2{
+    font-family: 'Anton', sans-serif;
+    font-size: 15px;
+}
+.input_form:hover{
+    cursor: pointer;
+}
+.input_form{
+    font-family: 'Anton', sans-serif;
+    font-size: 15px;
+}
+.label_form label{
+    border: none;
+    padding: .7rem;
+}
+h1{
+    font-family: 'Anton', sans-serif;
+}
+.input-form-text{
+    border: none;
+    padding: .7rem;
+}
+.formulario{
+    background-color: #adb5bd;
+    width:20%;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+div{
+    padding: 10px;
+    margin: 16px;
+    font-size: 25px;
+    border-radius: 4px;
+    background-color: rgb(190, 190, 188); 
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+}
+
+table{
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    margin: 16px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+.contenedorConsultar{
+    font-size: 30px;
+}
+.table{
+    margin: 16px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
