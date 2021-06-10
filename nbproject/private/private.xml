@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/web/iniciaradministrador.html</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/src/java/UsuarioControl/AccionesUsuario.java</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/web/index.html</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/src/java/Servlets/guardarEmpleado.java</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/web/assets/css/styles.css</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/web/assets/css/sabores.css</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/web/iniciarsesion.jsp</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/src/java/Servlet/InicioSesion.java</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/web/helado_chococo.html</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/web/registroempleados.jsp</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/web/producto_chocolate.html</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/web/editarempleado.jsp</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/web/assets/css/iniciar.css</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/web/sabores.html</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/src/java/ServletsUsuario/guardarUsuario.java</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/web/iniciar.html</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/registro2.html</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/src/java/models/Conexion.java</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/web/MVC.html</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/web/consultarEmpleados.jsp</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/src/java/Servlets/borrarEmpleado.java</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/web/registro.html</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/web/error.jsp</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/src/java/controllers/ControladorProducto.java</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/src/java/Control/Conexion.java</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/src/java/MVCModelo/Empleado.java</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/src/java/Servlets/actualizarEmpleado.java</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/web/producto_brownie.html</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/web/assets/css/MVC.css</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/src/java/Registro.java</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/src/java/iniciarsesion.java</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/src/java/MVCcontrol/Conexion.java</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/src/java/MVCcontrol/AccionesEmpleado.java</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/web/paletadefresa.html</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/src/java/models/ModeloProducto.java</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/web/shop.jsp</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/src/java/UsuarioControl/Conexion.java</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/web/iniciousu.jsp</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/web/admin.jsp</file>
+            <file>file:/C:/Users/molin/Desktop/4IV9-EXAMEN-PRACTICO-PSW/Examen-psw/src/java/Modelo/MUsuario.java</file>
+        </group>
+    </open-files>
+</project-private>
