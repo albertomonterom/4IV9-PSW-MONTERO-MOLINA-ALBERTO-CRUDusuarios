@@ -1,0 +1,100 @@
+.contenedor-todo{
+    padding-top: 4.8rem;
+    padding-bottom: .8rem;
+    margin: auto;
+    background: var(--azul1);
+}
+.formulario1{
+    background: url('https://economia3.com/wp-content/uploads/2019/08/heladeros-Vitrina-gelats.jpg') no-repeat center/cover;
+    margin: auto;
+}
+.formulario1 form{
+    width: 50%;
+    margin: auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+.formulario1 .titulocontacto1{
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    font-size: 1.5em;
+    margin-bottom: 0px;
+    color: var(--blanquito);
+    background: rgba(0,0,0,.5);
+    padding: 10px;
+}
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="date"]{
+    font-size: 100%;
+    width: 50%;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: var(--blanquito);
+}
+.input-contenedor{
+    margin: auto;
+    margin-bottom: 0px;
+    width: 50%;
+    border-bottom: 1px solid var(--rojito);
+    background: rgba(0,0,0,.5);
+    padding: 10px;
+}
+.input-contenedor1{
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 50px;
+    width: 50%;
+    border-bottom: 1px solid var(--rojito);
+    background: rgba(0,0,0,.5);
+    padding: 10px;
+}
+.icon{
+    min-width: 50px;
+    text-align: center;
+    color: var(--blanquito);
+}
+button{
+    border: none;
+    width: 50%;
+    margin-left: 120px;
+    text-align: center;
+    background: var(--azul2);
+    color: var(--grisclaro);
+    font-size: 100%;
+    padding: 10px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover{
+    background: var(--azul1);
+}
+p{
+    text-align: center;
+    color: var(--blanquito);
+    background: rgba(0,0,0,.5);
+    width: 50%;
+    margin: auto;
+}
+.link{
+    text-decoration: none;
+    color:var(--grisclaro);
+    font-weight: 600;
+}
+.link:hover{
+    color: var(--grisoscuro);
+}
+::placeholder{
+    color: var(--blanquito);
+}
+@media screen and (min-width: 768px){
+    button{
+        margin-left: 345px;
+    }
+}
